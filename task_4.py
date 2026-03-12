@@ -45,7 +45,9 @@ def repos(login, flag1):
         if not found:
             print("\nНичего не найдено.")
         input("\nНажмите Enter, что бы вернуться")
-        os.system('cls')
+    else:
+        print(f"Ошибка: {response.status_code}")
+    os.system('cls')
 
 
 def menu():

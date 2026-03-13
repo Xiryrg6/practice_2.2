@@ -12,8 +12,8 @@ def profile(user_data):
          f"|Имя: {user_data["name"]}\n" \
          f"|Репозиториев: {user_data["public_repos"]}\n" \
          f"|Обсуждений: {user_data["public_gists"]}\n" \
-         f"|Подписчиков: {user_data["following"]}\n" \
-         f"|Подписок: {user_data["followers"]}\n" \
+         f"|Подписчиков: {user_data["followers"]}\n" \
+         f"|Подписок: {user_data["following"]}\n" \
          f"|Профиль: {user_data["html_url"]}\n" \
           "|----------------------------------------|")
     input("\nНажмите Enter, что бы вернуться.")

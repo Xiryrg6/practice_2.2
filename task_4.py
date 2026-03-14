@@ -31,7 +31,7 @@ def repos(login, flag1):
         found = False
         for repos in repos_data:
             if flag2:
-                if repos["name"].lower() != search.lower(): continue
+                if repos["name"] != search: continue
             found = True
             print("\n|------------------------------------------------|\n" \
                    f"|Название: {repos['name']}\n" \

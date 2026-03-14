@@ -33,7 +33,18 @@ def view_currency(currencies, code):
 def load_groups():
     if os.path.exists(SAVE_FILE):
         with open(SAVE_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
+            data = f.read().strip()
+            if not data:
+                return {}
+            else:
+                try:
+                    json_data = json.loads(data)
+                    if not json_data:
+                        return {}
+                    else:
+                        return json_data
+                except json.JSONDecodeError:
+                    return {}
     return {}
 
 
